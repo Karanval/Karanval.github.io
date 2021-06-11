@@ -1,0 +1,41 @@
+# User config
+author: "Karanva"
+tagline: "Karanva Portfolio WIP"
+description: "A very simple portfolio about game development"
+keywords: "Game development, game, game design, game art, game tech"
+email: "karolina.arancibiova@gmail.com"
+linkedin: "https://www.linkedin.com/in/karanva/"
+github: "https://github.com/Karanval"
+
+# Site config
+logo: /assets/images/batIcon.png
+baseurl: ""
+
+# allowsearch: true
+enabletags: true
+tagarray: []
+
+paginate: 20
+per_page: 20
+paginame_path: "/page:num/"
+gems: [jekyll-paginate, jekyll-gist]
+
+collections:
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "areas"
+    values:
+      layout: "area"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

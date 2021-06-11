@@ -1,0 +1,12 @@
+<nav class="menu navbar">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+        <ul class=" nav navbar-nav  {{ page.layout }}">
+            {% for item in site.data.navigation %}
+            <li class=" {{ page.url }} {% if page.url == item.link %}current-menu-item{% endif %}"> 
+                <a href="{{ item.link }}" >{{ item.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

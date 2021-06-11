@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="container main outer">
+	<div class="row">
+		<div class="col-md-5 col-xs-12">
+			{% for image_path in page.images %}
+				<img src="{{ image_path | prepend: site.baseurl }}" class="img-fluid" alt="{{ image_alt }}" />
+				<br>
+			{% endfor %}
+		</div>
+		<div class="col-md-6 col-xs-12 full">
+			<article>
+				<div class="">
+				<span class="text-muted">Description</span>
+					<p>{{ content }}</p>
+				</div>
+				<br>
+				<div class="">
+					<span class="text-muted">Repo</span>
+					<p><a href="{{ page.project_url }}"> {{ page.project_url }}</a></p>
+					
+					{% if page.link %}
+						<span class="text-muted">Link</span>
+						<p><a href="{{ page.link }}"> {{ page.link }}</a></p>
+					{% endif %}
+
+					<span class="text-muted">Topic</span>
+					<p>{{ page.where }}</p>
+					<span class="text-muted">Type</span>
+					<p>{{ page.type }}</p>
+					<span class="text-muted">Year</span>
+					<p>{{ page.year }}</p>
+
+				</div>
+			</article>
+		</div> 
+	</div>
+</div>

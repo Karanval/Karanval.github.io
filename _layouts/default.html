@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    
+    {% include meta.html %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <script type="text/javascript">window.baseurl = '{{ site.url }}';</script>
+    {% include css.html %}
+    
+  </head>
+
+  <body class="home overflow-hidden">
+    
+    {% include header.html %}
+
+    <main class="content main outer ">
+    
+      <div class="container">
+        <div class=" full well">
+          {{ content }}
+          <div class="row">
+            <div class="col-md-12 col-xs-12 footer">
+              {% include footer.html %}
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+    
+    {% include js.html %}
+
+  </body>
+
+</html>
