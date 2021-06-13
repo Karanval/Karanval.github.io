@@ -65,6 +65,10 @@ p.info a {
     color: rgba(255, 255, 255, 0.63);
     background: #009688;
 }
+
+#grad {
+    background-image: linear-gradient(to right, #068b7e, #009688);
+}
 .menu ul li {
     list-style: none;
     margin: 5px 5px;
@@ -111,6 +115,17 @@ h2.blog-title-pro:after {
     margin-left: 3px;
     background: rgba(255, 255, 255, 0.72);
 }
+
+line {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin-top: 16px;
+    margin-left: 3px;
+    background: rgba(255, 255, 255, 0.72);
+}
+
 span.tags{ margin: 0 2px;cursor: pointer;display: inline-block;}
 .card .card-image .card-image-headline-custom{
     position: absolute;

@@ -33,6 +33,10 @@ layout: default
 					<span class="text-muted">Year</span>
 					<p>{{ page.year }}</p>
 
+					<span class="text-muted">All tags</span>
+					{% for j in page.tags%}
+						<span class="label tags tag-filter" data-tag="{{ j | downcase }}">{{ j }}</span>
+					{% endfor %}
 				</div>
 			</article>
 		</div> 
