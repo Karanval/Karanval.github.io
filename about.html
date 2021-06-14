@@ -1,27 +1,29 @@
 ---
 layout: default
 title: About
-cv: "/assets/cv_updated.pdf "
+resume: "/assets/cv_updated.pdf"
 cv_png_1: "/assets/images/cv_updated-1.png"
+karanva: "/assets/images/karanva.png"
 ---
 <div class="container main outer">
+   <div class="row">
+		<div class="col-md-2 col-xs-12">
+         <img src='{{ "/assets/images/karanva.png" | prepend: site.baseurl }}' class="profile-img" alt="{{ image_alt }}" />
+		</div>
+      <div class="col-md-8 col-xs-12 full">
+         I'm Karolina, I like challenges and learning new things. I have studied system engineer back in Bolivia, and just finished a MsC degree on Games (tech track) in Copenhagen. I am someone that can work alone and on a team, I can be independent but also rely and communicate with others. I enjoy creating aesthetics in games, and I can go as technical as required when doing so. I also like playing with experiences and interactions in games, specially the ones that do unexpected things.
+         <br>
+         Sommehow my hobbies keep growing, what is constant is the want to create things, so I like to try different crafts. I'm currently obsessing with doll pattern making.
+         <br>
+      <br>
+      Here is my updated resume:
+      </div>
+   </div>
    <div class="col-md-11 col-xs-12 full">
-   I'm Karolina, I like challenges and learning new things. I have studied system engineer back in Bolivia, and just finished a MsC degree on Games (tech track) in Copenhagen. I am someone that can work alone and on a team, I can be independent but also rely and communicate with others. I enjoy creating aesthetics in games, and I can go as technical as required when doing so. I also like playing with experiences and interactions in games, specially the ones that do unexpected things.
+      
+      <br>
+      <br>
 
-   <br>
-   My cv: <a href=https://drive.google.com/file/d/1rve5AWOjEs56f0CAfcG6Ea5okOe1ajFU/view?usp=sharing>drive link</a>
-   <object data="{{ cv }}" width="1000" height="1000" type="application/pdf">
-      <!-- <a href="{{ cv }}">test.pdf</a> -->
-   </object>
-
-   <!-- <iframe src="{{ cv }}" width="100%" height="500px">
-   </iframe> -->
-<!-- 
-   <p>Open a PDF file <a href="{{ cv | prepend: site.baseurl }}">example</a></p>
-   <p>pdf: {{ cv | prepend: site.baseurl }} </p> -->
-   
-   <!-- <img  src="{{ cv_png_1 | prepend: site.baseurl }}" class="img-fluid" alt="cv"> -->
-
-   <!-- <embed src="{{ cv | prepend: site.baseurl }}" width="800px" height="2100px" /> -->
-</div>
+      <object data='{{ "/assets/cv_updated.pdf" | prepend: site.baseurl }}' width="1000" height="1000" type="application/pdf"></object>
+   </div>
 </div>
