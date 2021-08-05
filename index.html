@@ -6,9 +6,70 @@ title: Home
 ---
 
 <div >
-  <h2>
-  This home page is a WIP, if you are here to see my portfolio, please go to the Projects tab. <br> <br> </h2>
-   <div class="list-group">
+  <article class="post">
+
+    <div class="post-content">
+      Preview of my projects
+      <br>
+    
+      <div class="projects row">
+    
+        {% for project in site.projects limit:2 %}
+          {% if project.show %}
+            <div class="project-item col-md-4 col-sm-6 col-xs-12" data-tags='{{ project.tags | jsonify | downcase }}'>
+              <div class="well project-outer">
+                <div class="project-inner">
+                  <!-- <a href="/static/projects/{{ project.image }}" class="thickbox"> -->
+                  <!-- <div class="project-img bordered" style="background-image: url('/static/projects/{{ project.image }}');"></div>
+                  </a> -->
+                  <!-- <p>{{ project.image | prepend: site.baseurl }}</p> -->
+                  <img src="{{ project.image | prepend: site.baseurl }}" class=" img-thumbnail project-img bordered" alt="{{ image_alt }}" />
+    
+                  {% if project.url %} <a href="{{ project.url }}"> {% endif %}
+                    <h3 class="project-headlines">{{ project.project_title }}</h3>
+                  {% if project.url %} </a> {% endif %}
+    
+                  <div class="project-content">
+                    <div class="tag-holder">
+                      {% if project.tags %} 
+                        {% for j in project.tags  limit: 5 %}
+                          <span class="label tags tag-filter" data-tag="{{ j | downcase }}">{{ j }}</span>
+                        {% endfor %}
+                      {% endif %}
+                    </div>
+                  </div>
+    
+                  <div class="project-footer"> 
+                    {% if project.url %} 
+                      <a href="{{ project.url }}" class="btn btn-info btn-raised btn-sm project-link">View</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+        <div class="project-item col-md-4 col-sm-6 col-xs-12">
+          <div class="well project-outer">
+            <div class="project-inner">
+              <div class="project-content">
+                
+                <a class="btn btn-primary btn-lg btn-block center" href="/projects" role="button">See more...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </article>
+
+
+
+
+  <!-- <h2>
+  This home page is a WIP, if you are here to see my portfolio, please go to the Projects tab. <br> <br> </h2> -->
+   <!-- <div class="list-group">
      {% for post in paginator.posts %}
      <div class="list-group-item">
        <div class="row-action-primary">
@@ -23,11 +84,11 @@ title: Home
      </div>
      <div class="list-group-separator"></div>
      {% endfor %}
-   </div>
+   </div>-->
   
 
    <!-- Pagination links -->
-   {% if paginator.total_pages > 1 %}
+   <!--{% if paginator.total_pages > 1 %}
    <ul class="pager">
      {% if paginator.previous_page %}
        <li class="previous">
@@ -63,5 +124,5 @@ title: Home
        <li class="next disabled"><span>&raquo;</span></li>
      {% endif %}
    </ul>
-   {% endif %}
+   {% endif %} -->
 </div><!-- end #home -->
