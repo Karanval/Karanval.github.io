@@ -18,7 +18,7 @@ tagarray: []
 paginate: 20
 per_page: 20
 paginame_path: "/page:num/"
-gems: [jekyll-paginate, jekyll-gist]
+plugins: [jekyll-paginate, jekyll-gist]
 
 collections:
   projects:
