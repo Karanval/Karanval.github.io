@@ -15,7 +15,7 @@ title: Home
       <div class="projects row">
     
         {% assign items = site.projects | reverse %}
-        {% for project in items reversed limit:2 %}
+        {% for project in items limit:2 %}
           {% if project.show %}
             <div class="project-item col-md-4 col-sm-6 col-xs-12" data-tags='{{ project.tags | jsonify | downcase }}'>
               <div class="well project-outer">

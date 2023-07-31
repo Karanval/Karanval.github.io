@@ -2,7 +2,7 @@
 layout: project
 show: true
 
-project_title: "Prideful Siblings"
+project_title: "Prideful Sliblings"
 type: "Game Jam"
 project_url: "https://spjak.itch.io/prideful-sliblings"
 where: "Nordic Game Jam"
@@ -18,10 +18,10 @@ tags:
 meta:
    keywords: "game jam, game design, game programming"
 
-image: "/assets/images/projects/prideful-sliblings/logo.png"
+image: "/assets/images/projects/prideful-sliblings/start.png"
 image_alt: "prideful-sliblings image"
 images:
-   - "/assets/images/projects/prideful-sliblings/logo.png"
+   - "/assets/images/projects/prideful-sliblings/start.png"
    - "/assets/images/projects/prideful-sliblings/snap0.png"
    - "/assets/images/projects/prideful-sliblings/snap1.png"
 ---
